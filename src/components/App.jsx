@@ -1,16 +1,23 @@
+import { Routes, Route } from 'react-router-dom';
+import { Home } from './Home/Home';
+// import { Loader } from './Loader/Loader';
+import { Movie } from './Movie/Movie';
+import { MovieSearch } from './MovieSearch/MovieSearch';
+import { NavBar } from './NavBar/NavBar';
+import { NotFound } from './NotFound/NotFound';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <>
+      {/* <Loader /> */}
+      <Routes>
+        <Route path="/" element={<NavBar />}>
+          <Route index element={<Home />} />
+          <Route path="/movie" element={<MovieSearch />} />
+          <Route path="movie/:movieId" element={<Movie />} />
+          <Route path="*" element={<NotFound />}></Route>
+        </Route>
+      </Routes>
+    </>
   );
 };

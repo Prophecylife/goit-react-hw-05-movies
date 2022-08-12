@@ -1,0 +1,27 @@
+nav a{
+  text-decoration: none;
+  color: #0e151d;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background: rgb(109, 214, 125);
+  transition: all ease-in-out 0.2s;
+  margin-left: 7px;
+
+}
+nav a:hover{
+  background: rgb(54, 70, 209);
+  transition: all ease-in-out 0.2s;
+}
+
+nav {
+ flex-direction:row;
+ align-items: center;
+ display: flex;
+}
+
+nav a.active{
+  background: rgb(54, 70, 209);
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #fff;
+}
