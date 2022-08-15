@@ -25,3 +25,9 @@ nav a.active{
   border-radius: 5px;
   color: #fff;
 }
+
+header {
+    margin-top: 5px;
+    margin-left: 5px;
+
+}

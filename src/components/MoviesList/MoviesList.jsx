@@ -1,16 +1,17 @@
 import { Link, useLocation } from 'react-router-dom';
 import './MoviesList.css';
 import { TbMovie } from 'react-icons/tb';
+// import { getGenresList } from '../../services/movie-service';
 
 export const MoviesList = ({ movies }) => {
   const location = useLocation();
-  console.log(movies);
+
   return (
     <>
       <h1>
-        Trending <TbMovie />
-        today
+        Trending <TbMovie /> today
       </h1>
+      {/* {console.log(getGenresList())} */}
       <ul>
         {movies.map(({ id, title, name }) => (
           <li key={id}>

@@ -5,6 +5,7 @@ import { useFetchMovies } from 'hooks/useFetchMovies';
 
 export const Home = () => {
   const { movies, error, loading } = useFetchMovies();
+  console.log(movies);
   return (
     <div>
       {loading && <Loader />}

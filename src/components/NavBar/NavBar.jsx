@@ -3,7 +3,7 @@ import './NavBar.css';
 
 export const NavBar = () => {
   return (
-    <>
+    <header>
       <nav>
         <NavLink to="/">Home</NavLink>
         <NavLink to="/movie">Movie</NavLink>
@@ -11,6 +11,6 @@ export const NavBar = () => {
       <main>
         <Outlet />
       </main>
-    </>
+    </header>
   );
 };
