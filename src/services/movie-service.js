@@ -19,7 +19,6 @@ export const searchMovies = async (query, page) => {
 
 export const getMovieDetails = async movieId => {
   const { data } = await axios.get(`movie/${movieId}?api_key=${API_KEY}`);
-  //   const parsedMovie = movieConvertData(data);
 
   return data;
 };
@@ -38,9 +37,9 @@ export const getMovieReviews = async movieId => {
   return data;
 };
 
-// export const getGenresList = async () => {
-//   const { data } = await axios
-//     .get(`/genre/movie/list?api_key=${API_KEY}&language=en-US`)
-//     .then(response => console.log(response));
-//   return data.genres;
-// };
+export const getMovieByQuery = async query => {
+  const { data } = await axios.get(
+    `search/movie?api_key=${API_KEY}&query=${query}`
+  );
+  return data;
+};

@@ -25,3 +25,16 @@
     background-color: rgb(167, 167, 224);
     color: black;
 }
+
+.links {
+    display: inline-block;
+   
+
+}
+
+.link {
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
