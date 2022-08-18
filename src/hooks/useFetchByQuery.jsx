@@ -32,5 +32,5 @@ export const useFetchByQuery = () => {
     setSearchParams({ query: query });
     setQuery(searchParams.get('query'));
   };
-  return { movies, error, isLoading, onHandleSubmit };
+  return { query, movies, error, isLoading, onHandleSubmit };
 };

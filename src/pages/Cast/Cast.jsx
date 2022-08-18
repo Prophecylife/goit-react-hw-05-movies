@@ -1,7 +1,7 @@
 import { Loader } from 'components/Loader/Loader';
 import { useFetchCast } from 'hooks/useFetchCast';
 
-export const Cast = () => {
+const Cast = () => {
   const { cast, error, loading } = useFetchCast();
   return (
     <>
@@ -30,3 +30,5 @@ export const Cast = () => {
     </>
   );
 };
+
+export default Cast;

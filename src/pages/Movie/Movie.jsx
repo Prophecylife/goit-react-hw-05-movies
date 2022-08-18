@@ -5,7 +5,7 @@ import { Loader } from 'components/Loader/Loader';
 import { AiFillStar } from 'react-icons/ai';
 import s from './Movie.module.css';
 
-export const Movie = () => {
+const Movie = () => {
   const location = useLocation();
 
   const { movie, loading, error } = useFetchMovie();
@@ -76,3 +76,5 @@ export const Movie = () => {
     </>
   );
 };
+
+export default Movie;

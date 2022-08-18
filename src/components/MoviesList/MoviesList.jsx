@@ -1,10 +1,11 @@
 import { Link, useLocation } from 'react-router-dom';
 import './MoviesList.css';
 import { TbMovie } from 'react-icons/tb';
+import PropTypes from 'prop-types';
 
 export const MoviesList = ({ movies }) => {
   const location = useLocation();
-  console.log(location);
+
   return (
     <>
       <ul>
@@ -19,4 +20,8 @@ export const MoviesList = ({ movies }) => {
       </ul>
     </>
   );
+};
+
+MoviesList.propTypes = {
+  movies: PropTypes.array,
 };

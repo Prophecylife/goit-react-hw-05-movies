@@ -3,7 +3,7 @@ import { useFetchByQuery } from 'hooks/useFetchByQuery';
 import { SearchForm } from '../../components/SearchForm/SearchForm';
 import { Loader } from 'components/Loader/Loader';
 
-export const MoviesSearch = () => {
+const MoviesSearch = () => {
   const { movies, isLoading, onHandleSubmit, error } = useFetchByQuery();
 
   return (
@@ -15,3 +15,5 @@ export const MoviesSearch = () => {
     </div>
   );
 };
+
+export default MoviesSearch;
