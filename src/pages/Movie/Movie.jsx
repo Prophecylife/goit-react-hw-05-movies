@@ -1,10 +1,10 @@
 import { useFetchMovie } from 'hooks/useFetchMovie';
 import {
   Link,
-  // useLocation,
+  useLocation,
   Navigate,
   Outlet,
-  useNavigate,
+  // useNavigate,
 } from 'react-router-dom';
 
 import { Loader } from 'components/Loader/Loader';
@@ -12,8 +12,8 @@ import { AiFillStar } from 'react-icons/ai';
 import s from './Movie.module.css';
 
 const Movie = () => {
-  // const location = useLocation();
-  const navigate = useNavigate();
+  const location = useLocation();
+  // const navigate = useNavigate();
   const { movie, loading, error } = useFetchMovie();
   const {
     id,
@@ -27,15 +27,15 @@ const Movie = () => {
     release_date: date = 'Release year',
   } = movie;
 
-  // const goBackLink = location?.state?.from ?? '/';
+  const goBackLink = location?.state?.from ?? '/';
   const year = new Date(date).getFullYear();
 
   return (
     <>
       <div>
-        <button className={s.backButton} onClick={() => navigate(-1)}>
+        <Link className={s.backButton} to={goBackLink}>
           Back to movies
-        </button>
+        </Link>
       </div>
 
       {loading && <Loader />}
@@ -71,10 +71,10 @@ const Movie = () => {
       )}
       <div className={s.links}>
         <hr />
-        <Link className={s.link} to="cast">
+        <Link className={s.link} to="cast" state={{ from: goBackLink }}>
           Cast
         </Link>
-        <Link className={s.link} to="reviews">
+        <Link className={s.link} to="reviews" state={{ from: goBackLink }}>
           Reviews
         </Link>
       </div>
